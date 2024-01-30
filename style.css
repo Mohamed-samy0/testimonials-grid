@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --dark-grayish: hsl(217, 19%, 35%);
+  --dark-blackish: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+}
+.container {
+  margin: auto;
+  max-width: 1200px;
+  padding: 0 2rem;
+}
+.testimonials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--light-grayish-blue);
+}
+.testimonials .row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.testimonials .row .item-1 {
+  background-color: var(--Moderate-violet);
+  grid-column-start: 1;
+  grid-column-end: 3;
+  position: relative;
+}
+
+.testimonials .row .item-1 h2 {
+  position: relative;
+  z-index: 1;
+}
+
+.testimonials .row .item-1 .quote {
+  position: absolute;
+  top: 0;
+  right: 100px;
+  width: 120px;
+  z-index: 0;
+}
+.testimonials .row .item-2 {
+  background-color: var(--dark-grayish);
+}
+.testimonials .row .item-3 {
+  background-color: #fff;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.testimonials .row .item-4 {
+  background-color: #fff;
+}
+.testimonials .row .item-5 {
+  background-color: var(--dark-blackish);
+  grid-column: 2 / 4;
+}
+/* item style start */
+.testimonials .row .item {
+  padding: 30px 40px;
+  border-radius: 10px;
+}
+.testimonials .row .item .avatar {
+  display: flex;
+  align-items: center;
+}
+.testimonials .row .item .avatar img {
+  width: 40px;
+  margin-right: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--Light-gray);
+}
+.testimonials .row .item-5 .avatar img {
+  border: 2px solid var(--Moderate-violet);
+}
+.testimonials .row .item h2 {
+  font-size: 20px;
+  margin: 20px 0;
+}
+/* item style end */
+
+.testimonials .item-1 .avatar h3,
+.testimonials .item-2 .avatar h3,
+.testimonials .item-5 .avatar h3 {
+  color: var(--Light-gray);
+}
+.testimonials .item-1 .avatar p,
+.testimonials .item-2 .avatar p,
+.testimonials .item-5 .avatar p {
+  color: var(--Light-gray);
+  opacity: 50%;
+  margin-top: 3px;
+}
+.testimonials .item-1 h2,
+.testimonials .item-2 h2,
+.testimonials .item-5 h2 {
+  color: var(--Light-gray);
+}
+.testimonials .item-1 .description,
+.testimonials .item-2 .description,
+.testimonials .item-5 .description {
+  color: var(--Light-gray);
+  opacity: 70%;
+}
+.testimonials .item-3 .avatar h3,
+.testimonials .item-4 .avatar h3 {
+  color: var(--dark-grayish);
+}
+.testimonials .item-3 .avatar p,
+.testimonials .item-4 .avatar p {
+  color: var(--dark-grayish);
+  opacity: 50%;
+}
+.testimonials .item-3 h2,
+.testimonials .item-4 h2 {
+  color: var(--dark-grayish);
+}
+.testimonials .item-3 .description,
+.testimonials .item-4 .description {
+  color: var(--dark-grayish);
+  opacity: 70%;
+  line-height: 1.5;
+}
